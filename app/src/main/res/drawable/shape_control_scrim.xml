@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    播放控制层的背景：上下两端各一层压深，中间留空，让画面从控制区中间透出来。
+    改造前是平铺的 @color/black_20，整屏都被压暗且与视频内容无关。
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:startColor="@color/webhtv_scrim_strong"
+                android:centerColor="@color/webhtv_scrim_soft"
+                android:endColor="@android:color/transparent"
+                android:centerY="0.28"
+                android:type="linear" />
+        </shape>
+    </item>
+    <item android:gravity="bottom" android:height="200dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:startColor="@android:color/transparent"
+                android:centerColor="@color/webhtv_color_item_overlay"
+                android:endColor="@color/webhtv_scrim_deep"
+                android:type="linear" />
+        </shape>
+    </item>
+</layer-list>

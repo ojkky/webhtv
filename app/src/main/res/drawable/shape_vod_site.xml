@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    片源角标：改用主色容器底 + 容器前景字（深色表为琥珀底深字，浅色表为米金底深字），
+    比原来「透明底 + 主色字」在海报上稳定得多。
+-->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
-    <corners
-        android:bottomRightRadius="8dp"
-        android:topLeftRadius="8dp"
-        android:topRightRadius="8dp" />
+    <corners android:radius="7dp" />
 
-    <solid android:color="@color/bg_site" />
+    <solid android:color="?attr/colorPrimaryContainer" />
 
     <padding
-        android:bottom="4dp"
-        android:left="4dp"
-        android:right="4dp"
-        android:top="4dp" />
+        android:bottom="3dp"
+        android:left="6dp"
+        android:right="6dp"
+        android:top="3dp" />
 
 </shape>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 分类/筛选用芯片底色：选中为主色容器实底，默认中性容器。 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="?attr/colorPrimaryContainer" android:state_selected="true" />
+    <item android:color="?attr/colorPrimaryContainer" android:state_checked="true" />
+    <item android:alpha="0.9" android:color="?attr/colorSurfaceContainer" />
+</selector>

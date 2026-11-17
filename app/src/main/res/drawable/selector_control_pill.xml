@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    播放页动作芯片底：默认 20% 白玻璃，选中为主色容器实底。
+    原来这些动作是没有底的裸文字（靠 1.5dp 焦点环辨认），在视频画面上边界模糊。
+-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?attr/colorControlHighlight">
+    <item>
+        <selector>
+            <item android:state_selected="true">
+                <shape android:shape="rectangle">
+                    <corners android:radius="999dp" />
+                    <solid android:color="?attr/colorPrimaryContainer" />
+                </shape>
+            </item>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:radius="999dp" />
+                    <solid android:color="@color/webhtv_control_glass" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

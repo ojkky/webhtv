@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    底部导航承托面：上部圆角 22dp 的浮层，顶部一道 1dp 分隔线。
+
+    保持满宽是为了配合 HomeActivity / WebHomeChromeController 对 navigation 的
+    setPadding(0,0,0,bottom)（系统手势条安全区就靠这条 padding 让位）。若做成带左右外边距的
+    悬浮胶囊，代码写入的 bottom padding 会把图标整体顶离底部，视觉不再居中。
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners
+                android:topLeftRadius="22dp"
+                android:topRightRadius="22dp" />
+            <solid android:color="?attr/colorSurfaceContainerHigh" />
+        </shape>
+    </item>
+    <item android:gravity="top" android:height="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/colorOutlineVariant" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 播放页动作芯片前景色：选中为琥珀容器前景，其余为控制层亮色。 -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/webhtv_color_on_primary_container" android:state_selected="true" />
+    <item android:color="@color/webhtv_color_on_primary_container" android:state_checked="true" />
+    <item android:color="@color/webhtv_color_player_control" />
+</selector>

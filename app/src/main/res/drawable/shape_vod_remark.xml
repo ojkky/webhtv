@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 进度标签：贴在海报左下，胶囊底 + 亮字，避免与海报内容抢视线。 -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
-    <solid android:color="@color/bg_remark" />
+    <corners android:radius="8dp" />
+
+    <solid android:color="@color/webhtv_scrim_pill" />
 
     <padding
-        android:bottom="4dp"
-        android:left="4dp"
-        android:right="4dp"
-        android:top="4dp" />
-
-    <corners
-        android:bottomRightRadius="4dp"
-        android:topRightRadius="4dp" />
+        android:bottom="3dp"
+        android:left="7dp"
+        android:right="7dp"
+        android:top="3dp" />
 
 </shape>
