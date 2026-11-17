@@ -1,132 +1,89 @@
 <resources>
-    <!-- Canonical semantic defaults. Keep in sync with ThemeTokens. -->
-    <color name="webhtv_color_primary">#A8C7FA</color>
-    <color name="webhtv_color_on_primary">#062E6F</color>
-    <color name="webhtv_color_primary_container">#0842A0</color>
-    <color name="webhtv_color_on_primary_container">#D3E3FD</color>
-    <color name="webhtv_color_secondary">#C6C6C9</color>
-    <color name="webhtv_color_on_secondary">#2F3133</color>
-    <color name="webhtv_color_secondary_container">#44474A</color>
-    <color name="webhtv_color_on_secondary_container">#E2E2E6</color>
-    <color name="webhtv_color_tertiary">#8ECDFF</color>
-    <color name="webhtv_color_on_tertiary">#003353</color>
-    <color name="webhtv_color_error">#FFB4AB</color>
-    <color name="webhtv_color_on_error">#690005</color>
-    <color name="webhtv_color_error_container">#93000A</color>
-    <color name="webhtv_color_on_error_container">#FFDAD6</color>
-    <color name="webhtv_color_success">#8EDB9F</color>
-    <color name="webhtv_color_on_success">#003918</color>
-    <color name="webhtv_color_success_container">#00522A</color>
-    <color name="webhtv_color_on_success_container">#C4EED0</color>
-    <color name="webhtv_color_warning">#F2C66D</color>
-    <color name="webhtv_color_on_warning">#402D00</color>
-    <color name="webhtv_color_warning_container">#5C4200</color>
-    <color name="webhtv_color_on_warning_container">#FFDF9A</color>
-    <color name="webhtv_color_surface">#101418</color>
-    <color name="webhtv_color_surface_dim">#0B0E11</color>
-    <color name="webhtv_color_surface_bright">#363A3F</color>
-    <color name="webhtv_color_surface_container_lowest">#0B0E11</color>
-    <color name="webhtv_color_surface_container_low">#181C20</color>
-    <color name="webhtv_color_surface_container">#1F2428</color>
-    <color name="webhtv_color_surface_container_high">#2A2F34</color>
-    <color name="webhtv_color_surface_container_highest">#34393E</color>
-    <color name="webhtv_color_on_surface">#E2E2E9</color>
-    <color name="webhtv_color_on_surface_variant">#C4C6D0</color>
+    <!--
+        深色表：深墨底 + 琥珀主色（默认外观）。角色名与数量与改造前一致，只换取值。
+
+        对比度口径：主色 #E9B872 对 surface #0E1013 9.4:1；onPrimary #241703 对主色
+        9.0:1；onSurface #EFEAE2 对 surface 13.3:1；onSurfaceVariant #BDB7AC 8.6:1。
+    -->
+    <color name="webhtv_color_primary">#E9B872</color>
+    <color name="webhtv_color_on_primary">#241703</color>
+    <color name="webhtv_color_primary_container">#4A3316</color>
+    <color name="webhtv_color_on_primary_container">#FFDDA8</color>
+    <color name="webhtv_color_secondary">#C9C3B8</color>
+    <color name="webhtv_color_on_secondary">#26221C</color>
+    <color name="webhtv_color_secondary_container">#39332C</color>
+    <color name="webhtv_color_on_secondary_container">#EAE2D6</color>
+    <color name="webhtv_color_tertiary">#8FC7B6</color>
+    <color name="webhtv_color_on_tertiary">#00251C</color>
+    <color name="webhtv_color_error">#FFB4A9</color>
+    <color name="webhtv_color_on_error">#5C1008</color>
+    <color name="webhtv_color_error_container">#8C1D18</color>
+    <color name="webhtv_color_on_error_container">#FFDAD5</color>
+    <color name="webhtv_color_success">#9BD7A6</color>
+    <color name="webhtv_color_on_success">#00320F</color>
+    <color name="webhtv_color_success_container">#1B5129</color>
+    <color name="webhtv_color_on_success_container">#C6F0CE</color>
+    <color name="webhtv_color_warning">#F5C66B</color>
+    <color name="webhtv_color_on_warning">#3D2A00</color>
+    <color name="webhtv_color_warning_container">#5A4200</color>
+    <color name="webhtv_color_on_warning_container">#FFE0A8</color>
+    <color name="webhtv_color_surface">#0E1013</color>
+    <color name="webhtv_color_surface_dim">#08090B</color>
+    <color name="webhtv_color_surface_bright">#363A41</color>
+    <color name="webhtv_color_surface_container_lowest">#08090B</color>
+    <color name="webhtv_color_surface_container_low">#15171B</color>
+    <color name="webhtv_color_surface_container">#1B1E23</color>
+    <color name="webhtv_color_surface_container_high">#25282E</color>
+    <color name="webhtv_color_surface_container_highest">#2F333A</color>
+    <color name="webhtv_color_on_surface">#EFEAE2</color>
+    <color name="webhtv_color_on_surface_variant">#BDB7AC</color>
     <!-- Alpha variants of webhtv_color_on_surface; keep the RGB in sync with the token. -->
-    <color name="webhtv_on_surface_20">#33E2E2E9</color>
-    <color name="webhtv_on_surface_70">#B3E2E2E9</color>
-    <color name="webhtv_on_surface_80">#CCE2E2E9</color>
-    <color name="webhtv_on_surface_90">#E6E2E2E9</color>
-    <color name="webhtv_color_outline">#8E9099</color>
-    <color name="webhtv_color_outline_variant">#44474F</color>
-    <color name="webhtv_color_inverse_surface">#E2E2E9</color>
-    <color name="webhtv_color_inverse_on_surface">#2F3033</color>
-    <color name="webhtv_color_inverse_primary">#0B57D0</color>
+    <color name="webhtv_on_surface_20">#33EFEAE2</color>
+    <color name="webhtv_on_surface_70">#B3EFEAE2</color>
+    <color name="webhtv_on_surface_80">#CCEFEAE2</color>
+    <color name="webhtv_on_surface_90">#E6EFEAE2</color>
+    <color name="webhtv_color_outline">#8F8A82</color>
+    <color name="webhtv_color_outline_variant">#454A51</color>
+    <color name="webhtv_color_inverse_surface">#EFEAE2</color>
+    <color name="webhtv_color_inverse_on_surface">#1B1E23</color>
+    <color name="webhtv_color_inverse_primary">#845012</color>
     <color name="webhtv_color_scrim">#8A000000</color>
     <!--
-        播放页（视频层）环色 = 与应用表面焦点环同值（近白）。
-
-        用户报告（2026-10-11，dev1 实机）：「播放页存在多个不同颜色的高亮效果」——同一页里
-        应用表面元素是近白环 #F5F7FF、视频层元素（分段/排序芯片、控制条、画面框）是灰蓝环
-        #7695C5。深色表下这两类宿主的底色全部是深色（深色 surface、固定深靛玻璃、多数视频
-        画面），近白环对它们都可读，所以深色表不需要为可读性保留第二种高亮色，统一取近白
-        （与上游「默认选中边框是白色」的观感一致）。
-
-        浅色表不能同值：浅色 FOCUS 深蓝 #0B57D0 画在固定玻璃上只有 1.83:1，必须保留派生
-        夹取（见 values/webhtv_tokens.xml 与 ThemeResolver.PLAYER_RING_BACKDROPS）。
-
-        已知取舍：近白环画在**纯白视频**上对比度不足（≈1.0:1）。该场景只在视频亮场景
-        （雪/白墙）且焦点落在画面框或播控条上时出现，而深色表选近白正是用户明确要求的
-        「默认选中边框是白色」；浅色表仍由夹取保证 ≥3:1。
+        播放页（视频层）环色 = 应用表面焦点环同族（暖白金）：深玻璃与深色画面都可读，
+        因此播放页只有一种高亮色。
     -->
-    <color name="webhtv_color_player_focus_ring">#F5F7FF</color>
-    <color name="webhtv_color_player_current_ring">#00A95A</color>
+    <color name="webhtv_color_player_focus_ring">#FFDEA8</color>
+    <color name="webhtv_color_player_current_ring">#7FD3A2</color>
     <color name="webhtv_color_shadow">#000000</color>
-    <!--
-        深色表焦点环 = 近白（与上游的“白色焦点环”观感一致）。
-
-        为什么不是纯 #FFFFFF：本仓库有 ThemeBinder 运行时改写通道，它按“颜色→语义角色”
-        精确匹配；而 webhtv_on_wallpaper 两张表恒为 #FFFFFF。若焦点也取 #FFFFFF，
-        ThemeColorIndex 会把 #FFFFFF 映射到 FOCUS 角色，用户切换/自定义主题时
-        壁纸上的白色文字会被改写成焦点色（ThemeBaseWiringTest 钉住了这条不变量）。
-        #F5F7FF 与纯白视觉上无法区分，对深色 surface 仍有 17.3:1。
-    -->
-    <color name="webhtv_color_focus">#F5F7FF</color>
-    <color name="webhtv_color_player_control">#FFFFFF</color>
-    <color name="webhtv_color_player_control_muted">#CCFFFFFF</color>
-    <color name="webhtv_color_player_control_active">#FFD35C</color>
+    <color name="webhtv_color_focus">#FFD79E</color>
+    <color name="webhtv_color_player_control">#FFF9F0</color>
+    <color name="webhtv_color_player_control_muted">#CCFFF9F0</color>
+    <color name="webhtv_color_player_control_active">#F0BB69</color>
     <color name="webhtv_color_player_scrim">#8F000000</color>
-    <color name="webhtv_color_health_good">#8EDB9F</color>
-    <color name="webhtv_color_health_warn">#F2C66D</color>
-    <color name="webhtv_color_health_bad">#FFB4AB</color>
-    <color name="webhtv_color_overlay_light">#14FFFFFF</color>
-    <color name="webhtv_color_overlay_dark">#66000000</color>
-    <!-- 条目遮罩底色与文字色。遮罩与日间表同值（@color/black_40 = #66000000）：它压的
-         底材是海报与封面，与页面调色板无关。文字色取本表 colorOnPrimary（深蓝 #062E6F），
-         与日间表取更深的 onPrimary 同理。核算见 values/webhtv_tokens.xml 的同名条目。 -->
+    <color name="webhtv_color_health_good">#9BD7A6</color>
+    <color name="webhtv_color_health_warn">#F5C66B</color>
+    <color name="webhtv_color_health_bad">#FFB4A9</color>
+    <color name="webhtv_color_overlay_light">#1AFFEBD6</color>
+    <color name="webhtv_color_overlay_dark">#52000000</color>
     <color name="webhtv_color_item_overlay">#66000000</color>
-    <color name="webhtv_color_on_item_overlay">#062E6F</color>
-    <!--
-        Foreground for content drawn straight on the app wallpaper.
-
-        One ?attr/colorOnSurface cannot serve both mobile consumers: every mobile
-        activity paints a full-screen CustomWallView under its content and the built-in
-        walls are dark, while dialogs draw their text on a light panel. Whichever table
-        is compiled, one of the two loses: the light table left the settings rows
-        near-black on the wallpaper, the dark table turned dialog text light on a light
-        card. This role is the missing third value.
-
-        It is 0xFFFFFFFF in both palettes because the wallpaper is always dark, so it
-        needs no flavour or values-night override, and it matches the colour upstream
-        painted these rows with (@color/white) so the default appearance is unchanged.
-
-        The name deliberately avoids the webhtv_color_ prefix: ThemeTokens models the
-        Material role contract and ThemeContractTest freezes that contract at exactly
-        49 entries, so this is an extra non-role resource in the same family as
-        webhtv_on_surface_20/70/80/90 in each palette.
-
-        ThemeBinder leaves it alone. The baseline palette assigns 0xFFFFFFFF to several
-        unrelated roles (onPrimary, onError, onSuccess, onWarning), whose active values
-        never agree, so ThemeColorIndex sees the value as shared and skips the rewrite.
-        ThemeBaseWiringTest freezes that property.
-    -->
-    <color name="webhtv_on_wallpaper">#FFFFFF</color>
-    <!--
-        壁纸上的次级前景，与日间表同值：壁纸本身两张表里都是深色，所以这一角色不需要
-        随明暗切换。派生依据与对比度核算见 values/webhtv_tokens.xml 的同名条目。
-    -->
-    <color name="webhtv_on_wallpaper_variant">#CCFFFFFF</color>
-    <!--
-        卡片角标底色，与日间表同值：角标画在海报上，与页面调色板无关，因此不需要随明暗切换。
-        取值依据与对比度核算见 values/webhtv_tokens.xml 的同名条目。
-    -->
-    <color name="webhtv_color_badge_progress">#177535</color>
-    <color name="webhtv_color_badge_site">#C62828</color>
-    <color name="webhtv_color_badge_year">#1565C0</color>
-    <!-- 壁纸上的错误前景色，与日间表同值：壁纸在两种模式下都是深色，不随模式切换。
-         取值依据与实测对比度见 values/webhtv_tokens.xml 的同名条目。 -->
+    <color name="webhtv_color_on_item_overlay">#EFEAE2</color>
+    <color name="webhtv_on_wallpaper">#FFFDF7</color>
+    <color name="webhtv_on_wallpaper_variant">#D8D2C6</color>
+    <color name="webhtv_color_badge_progress">#146B30</color>
+    <color name="webhtv_color_badge_site">#A6231B</color>
+    <color name="webhtv_color_badge_year">#17539E</color>
     <color name="webhtv_color_on_wallpaper_error">#FFDAD6</color>
-    <!-- 错误取值文字的实心深色底，与日间表同值：它是实心色，不跟随调色板。
-         核算过程见 values/webhtv_tokens.xml 的同名条目。 -->
     <color name="webhtv_color_error_value_bg">#4A3438</color>
+    <integer name="webhtv_focus_scale_duration">150</integer>
+    <!-- 「夜航」叠加层语义色（深色端）：两端贴深墨 surface，避免剧照与正文之间出现硬边。 -->
+    <color name="webhtv_scrim_strong">#B3000000</color>
+    <color name="webhtv_scrim_soft">#33000000</color>
+    <color name="webhtv_scrim_deep">#CC000000</color>
+    <color name="webhtv_scrim_pill">#CC000000</color>
+    <color name="webhtv_card_scrim_top">#99000000</color>
+    <color name="webhtv_card_scrim_bottom">#E6000000</color>
+    <color name="webhtv_control_glass">#33FFFFFF</color>
+    <color name="webhtv_badge_neutral">#CC1B1E23</color>
+    <color name="webhtv_hero_fade">#0E1013</color>
+    <color name="webhtv_hero_fade_center">#660E1013</color>
 </resources>
