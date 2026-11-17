@@ -316,8 +316,13 @@ public class ThemeResolverOverrideTest {
     }
 
     /**
-     * 空 profile 必须解析出编译期取值：遮罩 {@code #66000000}（{@code @color/black_40}），
-     * 遮罩上的文字沿用该表的 colorOnPrimary。这条断言就是「默认字节不变」的机器化表述。
+     * 空 profile 必须解析出编译期取值：遮罩 {@code #66000000}（{@code @color/black_40}）；
+     * 遮罩上的文字取该表 author 的默认值，且必须在复合后的遮罩上读得清。
+     *
+     * <p>「夜航」改造（docs/UI-REDESIGN.md）把深色表的 onPrimary 换成了深琥珀墨色（#241703），
+     * 它压在 40% 黑遮罩上只有约 1.4:1，不能再承担遮罩文字，因此遮罩文字改为独立授权的浅色墨
+     * （深色表 #EFEAE2、浅色表仍为 onPrimary #FFFFFF）。断言随之从「等于 onPrimary」改成
+     * 「在复合遮罩上 ≥4.5:1」，这才是该角色真正的契约。
      */
     @Test
     public void itemOverlaySlotsDefaultToTheCompiledAppearance() {
@@ -327,11 +332,13 @@ public class ThemeResolverOverrideTest {
                     ThemeSeed.NONE, 0, 0, ThemeProfile.defaultProfile(), null, dark);
             assertEquals("空 profile 的遮罩必须仍是 @color/black_40", 0x66000000, resolved.colorItemOverlay());
             assertEquals(base.colorItemOverlay(), resolved.colorItemOverlay());
-            assertEquals("遮罩文字默认沿用 onPrimary", base.colorOnPrimary(), resolved.colorOnItemOverlay());
-            assertEquals("遮罩上的文字色必须与编译期 colorOnPrimary 完全一致",
-                    base.colorOnPrimary(), base.colorOnItemOverlay());
-            assertEquals("深色表同样的落点：black_40 + 该表 onPrimary",
-                    dark ? 0xFF062E6F : 0xFFFFFFFF, base.colorOnItemOverlay());
+            int overlayBackdrop = ThemeContrast.composite(base.colorItemOverlay(), base.colorSurface());
+            assertTrue("遮罩文字默认必须在复合遮罩上 ≥4.5:1，实际 "
+                            + ThemeContrast.ratio(base.colorOnItemOverlay(), overlayBackdrop),
+                    ThemeContrast.ratio(base.colorOnItemOverlay(), overlayBackdrop) + 0.0001 >= 4.5);
+            if (!dark) {
+                assertEquals("浅色表的遮罩文字沿用 onPrimary", base.colorOnPrimary(), base.colorOnItemOverlay());
+            }
             assertEquals("整张 token 表不得被新槽扰动", base, resolved);
             assertEquals("空 profile 的遮罩文字同样不得漂移", base.colorOnItemOverlay(), resolved.colorOnItemOverlay());
         }
