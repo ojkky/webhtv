@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 分类芯片：胶囊 + 14/7 内边距，字号 13sp，选中走 primaryContainer（见 selector_text）。 -->
 <com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/text"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp"
     android:background="@drawable/shape_item_round"
     android:gravity="center"
+    android:includeFontPadding="false"
     android:textColor="@color/selector_text"
-    android:textSize="14sp"
-    tools:text="電影" />
+    android:fontFamily="sans-serif-medium"
+    android:textSize="13sp"
+    app:autoSizeTextType="none"
+    tools:text="电影" />

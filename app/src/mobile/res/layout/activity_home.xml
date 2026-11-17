@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    「夜航」手机端外壳：内容区 + 64dp 底部导航浮层。
+
+    ID 与视图类型不变（container / navigation）。导航从 56dp 无底色的贴底条改为 64dp 的
+    上部圆角承托面：图标 22dp、文字标签打开、选中态走主色（见 selector_nav）。
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -13,12 +19,15 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="64dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/transparent"
-        app:elevation="0dp"
+        android:background="@drawable/shape_nav_bar"
+        android:elevation="12dp"
+        app:elevation="12dp"
+        app:itemIconSize="22dp"
         app:itemIconTint="@color/selector_nav"
-        app:labelVisibilityMode="unlabeled"
+        app:itemTextColor="@color/selector_nav"
+        app:labelVisibilityMode="labeled"
         app:menu="@menu/menu_nav" />
 
 </RelativeLayout>
