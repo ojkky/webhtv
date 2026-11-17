@@ -4,13 +4,14 @@
         <item name="cornerFamily">rounded</item>
     </style>
 
+    <!-- 海报卡片圆角：与 shape_vod_name / shape_vod 的 14dp 对齐，三处必须同值。 -->
     <style name="Vod.Grid">
-        <item name="cornerSizeTopLeft">8dp</item>
-        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeTopLeft">14dp</item>
+        <item name="cornerSizeTopRight">14dp</item>
     </style>
 
     <style name="Vod.Grid.Large">
-        <item name="cornerSize">8dp</item>
+        <item name="cornerSize">14dp</item>
     </style>
 
     <style name="Vod.Circle">
@@ -19,8 +20,8 @@
     </style>
 
     <style name="Vod.List">
-        <item name="cornerSizeTopLeft">8dp</item>
-        <item name="cornerSizeBottomLeft">8dp</item>
+        <item name="cornerSizeTopLeft">14dp</item>
+        <item name="cornerSizeBottomLeft">14dp</item>
     </style>
 
     <style name="Player">
@@ -114,10 +115,26 @@
         <item name="android:backgroundDimEnabled">true</item>
     </style>
 
+    <!--
+        播放页动作芯片（全站唯一的动作条样式来源）。
+
+        改造前是「裸文字 + 焦点环」：在任意视频画面上都没有稳定底，选中态只能靠环色辨认。
+        现在统一为胶囊芯片：20% 白玻璃底、选中主色容器实底、13sp、34dp 高、左右 12dp。
+        textColor 走 @color/selector_control_text，因此在选中时文字切到容器前景色，
+        与底色一起构成完整的状态切换，不会出现「底色变了字还是白的」。
+    -->
     <style name="Control">
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
-        <item name="android:textColor">@color/player_control_text</item>
+        <item name="android:background">@drawable/selector_control_pill</item>
+        <item name="android:gravity">center</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:minHeight">34dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textColor">@color/selector_control_text</item>
+        <item name="android:textSize">13sp</item>
     </style>
 
     <style name="DisplayControl" parent="Control">

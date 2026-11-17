@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    卡片信息区（片名 + 集数/备注）的承载色带。
+
+    「夜航」改造把它从一块 40% 实心黑改成自下而上的渐变：底部 @color/webhtv_card_scrim_bottom 保证片名与集数行
+    在任意海报上都有 ≥9:1 的复合对比，向上过渡到全透明，让海报下缘仍然透出来。
+    纯白片名在复合底上 9.8:1，次级行（?attr/webhtvColorOnWallpaperVariant）6.9:1，
+    两者都稳过正文 4.5:1。圆角与海报卡片半径（14dp）对齐，只保留下方两角。
+-->
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
     <corners
-        android:bottomLeftRadius="8dp"
-        android:bottomRightRadius="8dp" />
+        android:bottomLeftRadius="14dp"
+        android:bottomRightRadius="14dp" />
 
-    <solid android:color="@color/black_20" />
-
-    <padding
-        android:bottom="6dp"
-        android:left="6dp"
-        android:right="6dp"
-        android:top="6dp" />
+    <gradient
+        android:angle="90"
+        android:startColor="@android:color/transparent"
+        android:centerColor="@color/webhtv_card_scrim_top"
+        android:centerY="0.42"
+        android:endColor="@color/webhtv_card_scrim_bottom"
+        android:type="linear" />
 
 </shape>

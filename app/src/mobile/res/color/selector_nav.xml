@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 底部导航着色：选中为主色（琥珀），未选中走次级前景，不再是硬编码白色。 -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:color="?attr/colorPrimary" android:state_checked="true" />
-    <item android:color="@color/white" android:state_checked="false" />
+    <item android:color="?attr/colorOnSurfaceVariant" android:state_checked="false" />
 </selector>

@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    中性可选中底（电视端设置行 / 列表选中态共用）。
+    保持改造前的语义与取值：选中 65% secondaryContainer，其余 15% 黑。
+    芯片（分类/收藏筛选）另有专用底 @color/selector_chip_bg，不要复用这一个 ——
+    TV 行的文字恒为壁纸白，选中底若换成浅主色容器会直接不可读。
+-->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:alpha="0.65" android:color="?attr/colorSecondaryContainer" android:state_selected="true" />
     <item android:alpha="0.15" android:color="@color/black" />
