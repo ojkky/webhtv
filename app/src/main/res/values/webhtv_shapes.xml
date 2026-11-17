@@ -1,19 +1,24 @@
 <resources>
+    <!--
+        「夜航」圆角体系：比沿用自 Material 默认的 4/8/12/16 整体放大一档，形成更柔和的
+        卡片语言。命名为 WebHTV.* 供 shapeAppearance / shapeAppearanceOverlay 引用，
+        名称与层级（ExtraSmall→Full）保持与改造前一致，调用方无需改动。
+    -->
     <style name="ShapeAppearance.WebHTV.ExtraSmall" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">4dp</item>
+        <item name="cornerSize">6dp</item>
     </style>
     <style name="ShapeAppearance.WebHTV.Small" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">8dp</item>
+        <item name="cornerSize">10dp</item>
     </style>
     <style name="ShapeAppearance.WebHTV.Medium" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">12dp</item>
+        <item name="cornerSize">14dp</item>
     </style>
     <style name="ShapeAppearance.WebHTV.Large" parent="">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">16dp</item>
+        <item name="cornerSize">18dp</item>
     </style>
     <style name="ShapeAppearance.WebHTV.ExtraLarge" parent="">
         <item name="cornerFamily">rounded</item>
